@@ -9,7 +9,7 @@ This project analyzes the relationship between special education (SPED) spending
 
 ## Installation and Setup
 1. Clone this repository: 
-'git clone https://github.com/yourusername/cps-sped-analysis.git'
+'git clone https://github.com/jleibson/cps-sped-analysis.git'
 'cd cps-sped-analysis'
 
 2. Create a virtual environment (optional but recommended):  
