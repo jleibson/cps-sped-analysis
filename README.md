@@ -9,15 +9,15 @@ This project analyzes the relationship between special education (SPED) spending
 
 ## Installation and Setup
 1. Clone this repository: 
-'git clone https://github.com/jleibson/cps-sped-analysis.git'
-'cd cps-sped-analysis'
+`git clone https://github.com/jleibson/cps-sped-analysis.git`
+`cd cps-sped-analysis`
 
 2. Create a virtual environment (optional but recommended):  
-'python -m venv venv'
-'source venv/bin/activate' 
+`python -m venv venv`
+`source venv/bin/activate`
 
 3. Install required packages:  
-'pip install pandas matplotlib numpy'
+`pip install pandas matplotlib numpy`
 
 
 ## Data Sources
