@@ -1,4 +1,4 @@
-# Chicago Public Schools Special Education Spending Analysis
+# CPS Special Education Spending Analysis
 
 ## Project Purpose
 This project analyzes the relationship between special education (SPED) spending and student academic growth in Chicago Public Schools (CPS) for the year 2017. Our goal is to provide data-driven insights to help CPS optimize resource allocation for special education programs, potentially improving educational outcomes for students with special needs.
