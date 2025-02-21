@@ -50,8 +50,29 @@ The `cps_analysis.py` script performs the following key functions:
 8. **Output Results**: Prints average growth percentiles to the console.
 9. **Visualize Results**: Generates scatter plots to visualize the relationship between SPED budget and student growth percentiles.
 
-## Results Interpretation
-The script outputs average growth percentiles for high and low spending schools. A scatter plot is generated to visualize the relationship between SPED budget and student growth percentiles.
+## Results 
+## Results
+
+After analyzing the data, the following results were observed:
+
+1. **Sample Size**:  
+   - Only 3 schools were successfully matched between the budget and SQRP datasets due to data integration challenges.
+
+2. **High SPED Spending Schools**:  
+   - **Average Reading Growth Percentile**: 80.5  
+   - **Average Math Growth Percentile**: 45.0  
+
+3. **Low SPED Spending Schools**:  
+   - **Average Reading Growth Percentile**: 70.0  
+   - **Average Math Growth Percentile**: 53.0  
+
+4. **Key Observations**:  
+   - High SPED spending schools showed higher average reading growth compared to low SPED spending schools.  
+   - Low SPED spending schools performed slightly better in math growth compared to high SPED spending schools.  
+
+5. **Visualization**:  
+   - A scatter plot was generated to visualize the relationship between SPED budget and student growth percentiles in reading and math.
+
 
 ## Challenges and Limitations
 - Data integration issues due to inconsistent school naming conventions.
