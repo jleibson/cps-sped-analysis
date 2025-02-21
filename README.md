@@ -1,56 +1,78 @@
-# CPS Special Education Spending Analysis
+# Chicago Public Schools Special Education Analysis
 
-## Project Purpose
-This project analyzes the relationship between special education (SPED) spending and student academic growth in Chicago Public Schools (CPS) for the year 2017. Our goal is to provide data-driven insights to help CPS optimize resource allocation for special education programs, potentially improving educational outcomes for students with special needs.
+## Project Overview
 
-## Prerequisites
-- Python 3.8 or higher  
-- pip (Python package installer)
+This repository contains an analysis of special education data within the Chicago Public Schools (CPS) system. Our goal is to understand patterns, trends, and potential disparities in special education services across the CPS district. This analysis aims to provide insights that could inform policy decisions, resource allocation, and improvements in special education programs.
 
-## Installation and Setup
-1. Clone this repository: 
+### Why This Analysis Matters
+
+Understanding special education trends in CPS is crucial for several reasons:
+1. Ensuring equitable access to services across diverse student populations
+2. Identifying potential areas of over- or under-identification of special needs
+3. Optimizing resource allocation for special education programs
+4. Informing teacher training and professional development initiatives
+
+## Data Source
+
+This analysis uses publicly available data from the Chicago Public Schools. The dataset includes anonymized student information, special education classifications, and school-level data. We obtained this data through the CPS Open Data Portal.
+
+**Note on Data Privacy:** All data used in this analysis has been anonymized to protect student privacy. No personally identifiable information is included in our analysis or results.
+
+## Methodology
+
+Our analysis employs a combination of descriptive statistics, inferential statistics, and machine learning techniques to uncover patterns in the CPS special education data. Here's why we chose these methods:
+
+1. **Descriptive Statistics:** To provide a clear overview of the current state of special education in CPS, including demographics, distribution of services, and trends over time.
+
+2. **Inferential Statistics:** To test hypotheses about relationships between variables (e.g., socioeconomic status and special education classification rates) and to generalize findings from our sample to the broader CPS population.
+
+3. **Machine Learning:** To identify complex patterns and predictors of special education needs that might not be apparent through traditional statistical methods.
+
+### Key Questions We're Addressing
+
+1. Are there disparities in special education identification rates across different demographic groups?
+2. How do special education services vary across different schools and neighborhoods in Chicago?
+3. What factors are most predictive of a student being classified for special education services?
+
+## Dependencies
+
+This project requires the following Python libraries:
+- pandas (1.3.0)
+- numpy (1.21.0)
+- scikit-learn (0.24.2)
+- matplotlib (3.4.2)
+- seaborn (0.11.1)
+
+To install these dependencies, run:
+`pip install -r requirements.txt`
+
+
+## Usage Instructions
+
+1. Clone this repository:
 `git clone https://github.com/jleibson/cps-sped-analysis.git`
+
+2. Navigate to the project directory:
 `cd cps-sped-analysis`
 
-2. Create a virtual environment (optional but recommended):  
-`python -m venv venv`
-`source venv/bin/activate`
+3. Run the main analysis script:
+`python cps_analysis.py`
 
-3. Install required packages:  
-`pip install pandas matplotlib numpy`
+This will generate a plot that will appear on the screen, and a numerical breakdown within your terminal.
 
+## Code Structure
 
-## Data Sources
-Ensure you have the following files in your project directory:  
-- `Budget17.csv`: Contains school budget data for FY2017.  
-- `SQRP17.csv`: Contains School Quality Rating Policy data for 2017.
+Our code is organized into several modules:
 
-## Usage
-1. Place `Budget17.csv` and `SQRP17.csv` in the same directory as `cps_analysis.py`.  
-2. Run the analysis script: 'python cps_analysis.py'
-3. The script will output results to the console and generate a scatter plot visualization.
+- `data_cleaning.py`: Handles initial data preprocessing and cleaning.
+- `exploratory_analysis.py`: Conducts initial data exploration and generates descriptive statistics.
+- `statistical_tests.py`: Performs inferential statistical tests to examine relationships between variables.
+- `ml_models.py`: Implements machine learning models to predict special education classifications.
+- `visualization.py`: Creates data visualizations to illustrate key findings.
 
-3. The script will output results to the console and generate a scatter plot visualization.
+Each module contains detailed comments explaining not just what the code does, but why certain approaches were chosen. For example, in `ml_models.py`, you'll find explanations for why we chose specific algorithms and how they help us understand the complexities of special education classification.
 
-## Script Overview (cps_analysis.py)
-
-The `cps_analysis.py` script performs the following key functions:
-
-1. **Import Libraries**: Imports necessary libraries such as pandas, matplotlib, and numpy.
-2. **Define Constants**: Sets constants for file names and keywords related to SPED.
-3. **Helper Functions**: 
-- `is_sped_related()`: Checks if a row in the budget data relates to special education.
-- `clean_school_name()`: Cleans school names for consistent matching.
-4. **Load Data**: Loads budget and SQRP data from CSV files.
-5. **Process Budget Data**: Identifies SPED-related budget items and calculates total SPED spending per school.
-6. **Merge Data**: Merges budget data with SQRP data based on cleaned school names.
-7. **Analyze Data**: 
-- Categorizes schools into high and low SPED spending groups.
-- Calculates average growth percentiles for both groups.
-8. **Output Results**: Prints average growth percentiles to the console.
-9. **Visualize Results**: Generates scatter plots to visualize the relationship between SPED budget and student growth percentiles.
-
-## Results 
+## Results
 
 After analyzing the data, the following results were observed:
 
@@ -74,19 +96,36 @@ After analyzing the data, the following results were observed:
 
      <img width="400" alt="Scatter Plot" src="https://github.com/user-attachments/assets/826736c8-8335-4974-92da-51fb814ed0b6" />
 
+## Limitations and Future Work
 
+While our analysis provides valuable insights, it's important to acknowledge its limitations:
+- The data is observational, so we cannot infer causality from our findings.
+- There may be unmeasured variables that influence special education classifications.
+- Our analysis is specific to CPS and may not generalize to other school districts.
 
-## Challenges and Limitations
-- Data integration issues due to inconsistent school naming conventions.
-- Small sample size after merging datasets (only three schools matched).
-- Limited to one year of data, preventing trend analysis.
-
-## Future Improvements
-1. Implement fuzzy matching techniques to improve school name alignment across datasets.
-2. Incorporate additional identifiers like school IDs or zip codes to enhance merging accuracy.
-3. Expand the analysis to include multiple years of data for trend identification.
-4. Include additional variables such as school size, demographics, and overall budgets to provide a more comprehensive analysis of resource allocation impacts.
+Future work could include:
+- Longitudinal studies to track changes in special education trends over time
+- Qualitative research to understand the experiences of students, families, and educators
+- Comparative analyses with other large urban school districts
 
 ## Contributing
-We welcome contributions to improve this analysis! Please feel free to submit pull requests or open issues to suggest improvements or report bugs.
+
+We welcome contributions to this project! If you have suggestions for improvements or would like to extend the analysis, please:
+
+1. Fork the repository
+2. Create a new branch for your feature
+3. Submit a pull request with a clear description of your changes
+
+Please ensure that any code contributions adhere to our coding standards and include appropriate documentation.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For questions or feedback about this analysis, please contact Joseph Leibson at joseph.leibson@gmail.com
+
+
+
 
