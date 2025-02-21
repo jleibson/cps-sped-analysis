@@ -51,7 +51,6 @@ The `cps_analysis.py` script performs the following key functions:
 9. **Visualize Results**: Generates scatter plots to visualize the relationship between SPED budget and student growth percentiles.
 
 ## Results 
-## Results
 
 After analyzing the data, the following results were observed:
 
@@ -72,6 +71,9 @@ After analyzing the data, the following results were observed:
 
 5. **Visualization**:  
    - A scatter plot was generated to visualize the relationship between SPED budget and student growth percentiles in reading and math.
+
+     <img width="400" alt="Scatter Plot" src="https://github.com/user-attachments/assets/826736c8-8335-4974-92da-51fb814ed0b6" />
+
 
 
 ## Challenges and Limitations
